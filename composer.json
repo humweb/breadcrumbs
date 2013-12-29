@@ -1,6 +1,6 @@
 {
     "name": "humweb/breadcrumbs",
-    "description": "This package helps to create scoped extendable validation services",
+    "description": "This package helps to create breadrumbs",
     "homepage": "https://github.com/humweb/validation",
     "keywords": ["breadcrumbs", "laravel"],
     "license": "MIT",
