@@ -1,25 +1,30 @@
 <?php namespace Humweb\Breadcrumbs;
 
 use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 
 class Breadcrumb extends Collection
 {
+
     /**
      * Add crumb to collection
+     * 
      * @param string $label label for link
      * @param string $url
      */
     public function add($label, $url = '')
     {
-        $key = \Str::slug($label);
+        $key = Str::slug($label);
         $this->put($key, ['label' => $label, 'url' => $url]);
 
         return $this;
     }
 
+
     /**
      * Clear all breadcrumbs
-     * @return this
+     * 
+     * @return Breadcrumb
      */
     public function clear()
     {
@@ -28,11 +33,13 @@ class Breadcrumb extends Collection
         return $this;
     }
 
-    public function toHtml()
-    {
-        return $this->render();
-    }
 
+    /**
+     * Render breadcrumbs
+     * 
+     * @param  string $presenter
+     * @return string
+     */
     public function render($presenter = null)
     {
         $presenter = strtolower($presenter);
