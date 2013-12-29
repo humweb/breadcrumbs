@@ -1,0 +1,23 @@
+{
+    "name": "humweb/breadcrumbs",
+    "description": "This package helps to create scoped extendable validation services",
+    "homepage": "https://github.com/humweb/validation",
+    "keywords": ["breadcrumbs", "laravel"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ryun shofner",
+            "email": "ryun@humboldtweb.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+         "illuminate/support": "4.1.x"
+    },
+    "autoload": {
+        "psr-0": {
+            "Humweb\\Breadcrumbs": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
