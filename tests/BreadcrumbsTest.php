@@ -1,5 +1,7 @@
 <?php namespace Humweb\Breadcrumbs\Tests;
 
+use Humweb\Breadcrumbs\Breadcrumb;
+
 class BreadcrumbsTest extends \PHPUnit_Framework_TestCase {
 
 

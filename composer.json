@@ -1,6 +1,6 @@
 {
     "name": "humweb/breadcrumbs",
-    "description": "This package helps to create breadrumbs",
+    "description": "This package helps to create breadcrumbs",
     "homepage": "https://github.com/humweb/validation",
     "keywords": ["breadcrumbs", "laravel"],
     "license": "MIT",
