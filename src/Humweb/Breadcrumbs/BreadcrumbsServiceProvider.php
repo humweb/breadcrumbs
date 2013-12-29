@@ -13,7 +13,7 @@ class BreadcrumbsServiceProvider extends ServiceProvider {
 
 	public function boot()
 	{
-		$this->package('humweb/Breadcrumbs');
+		$this->package('humweb/breadcrumbs');
 	}
 
 	/**
@@ -23,7 +23,10 @@ class BreadcrumbsServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
+		$this->app->bindShared('breadcrumbs', function($app)
+		{
+			return new Breadcrumb();
+		});
 	}
 
 	/**
@@ -33,7 +36,7 @@ class BreadcrumbsServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array();
+		return array('breadcrumbs', 'navigation');
 	}
 
 }
