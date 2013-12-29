@@ -3,7 +3,7 @@
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 
-class Breadcrumb extends Collection
+class Breadcrumbs extends Collection
 {
 
     /**

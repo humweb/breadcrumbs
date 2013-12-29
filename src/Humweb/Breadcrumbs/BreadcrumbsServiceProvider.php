@@ -16,6 +16,7 @@ class BreadcrumbsServiceProvider extends ServiceProvider {
 		$this->package('humweb/breadcrumbs');
 	}
 
+
 	/**
 	 * Register the service provider.
 	 *
@@ -25,9 +26,10 @@ class BreadcrumbsServiceProvider extends ServiceProvider {
 	{
 		$this->app->bindShared('breadcrumbs', function($app)
 		{
-			return new Breadcrumb();
+			return new Breadcrumbs();
 		});
 	}
+
 
 	/**
 	 * Get the services provided by the provider.

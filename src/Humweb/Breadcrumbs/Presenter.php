@@ -4,7 +4,7 @@ class Presenter {
 
 	protected $breadcrumb;
 
-	public function __construct(Breadcrumb $breadcrumb)
+	public function __construct(Breadcrumbs $breadcrumb)
 	{
 		$this->breadcrumb = $breadcrumb;
 	}

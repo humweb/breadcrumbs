@@ -1,13 +1,13 @@
 <?php namespace Humweb\Breadcrumbs\Tests;
 
-use Humweb\Breadcrumbs\Breadcrumb;
+use Humweb\Breadcrumbs\Breadcrumbs;
 
 class BreadcrumbsTest extends \PHPUnit_Framework_TestCase {
 
 
 	public function testAddingCrumbs()
 	{
-		$b = new Breadcrumb();
+		$b = new Breadcrumbs();
 
 		$b->add('Home', 'home/')
 		  ->add('About');
@@ -22,7 +22,7 @@ class BreadcrumbsTest extends \PHPUnit_Framework_TestCase {
 			['label' => 'About', 'url' => '']
 		];
 
-		$b = new Breadcrumb($links);
+		$b = new Breadcrumbs($links);
 
 		$bs3 = '<ol class="breadcrumb"><li><a href="home/">Home</a></li><li class="active">About</li></ol>';
 		$foundation = '<ul class="breadcrumbs"><li><a href="home/">Home</a></li><li class="current">About</li></ul>';
@@ -34,7 +34,7 @@ class BreadcrumbsTest extends \PHPUnit_Framework_TestCase {
 	
 	public function testClearBreadcrumbs()
 	{
-		$b = new Breadcrumb();
+		$b = new Breadcrumbs();
 
 		$b->add('Home', 'home/')
 		  ->add('About');
