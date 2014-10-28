@@ -1,7 +1,7 @@
 {
     "name": "humweb/breadcrumbs",
     "description": "This package helps to create breadcrumbs",
-    "homepage": "https://github.com/humweb/validation",
+    "homepage": "https://github.com/humweb/breadcrumbs",
     "keywords": ["breadcrumbs", "laravel"],
     "license": "MIT",
     "authors": [
@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-         "laravel/framework": "4.2.*"
+         "laravel/framework": "~4.0|~5.0"
     },
     "autoload": {
         "psr-0": {
