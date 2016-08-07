@@ -24,7 +24,7 @@ class BreadcrumbsServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app->bindShared('breadcrumbs', function($app)
+		$this->app->singleton('breadcrumbs', function($app)
 		{
 			return new Breadcrumbs();
 		});
