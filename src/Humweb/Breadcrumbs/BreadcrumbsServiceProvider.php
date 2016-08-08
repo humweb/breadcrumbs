@@ -11,12 +11,6 @@ class BreadcrumbsServiceProvider extends ServiceProvider {
 	 */
 	protected $defer = false;
 
-	public function boot()
-	{
-		$this->package('humweb/breadcrumbs');
-	}
-
-
 	/**
 	 * Register the service provider.
 	 *
