@@ -8,7 +8,7 @@ class Breadcrumbs extends Collection
 
     /**
      * Add crumb to collection
-     * 
+     *
      * @param string $label label for link
      * @param string $url
      */
@@ -23,7 +23,7 @@ class Breadcrumbs extends Collection
 
     /**
      * Clear all breadcrumbs
-     * 
+     *
      * @return Breadcrumb
      */
     public function clear()
@@ -36,22 +36,20 @@ class Breadcrumbs extends Collection
 
     /**
      * Render breadcrumbs
-     * 
+     *
      * @param  string $presenter
+     *
      * @return string
      */
     public function render($presenter = null)
     {
         $presenter = strtolower($presenter);
 
-        if (strtolower($presenter) === 'foundation')
-        {
+        if (strtolower($presenter) === 'foundation') {
             $presenter = new FoundationPresenter($this);
-
         } elseif (strtolower($presenter) === 'bs4') {
             $presenter = new Bootstrap4Presenter($this);
-        }
-        else {
+        } else {
             $presenter = new Presenter($this);
         }
 
