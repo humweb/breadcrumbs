@@ -47,14 +47,14 @@ class Breadcrumbs extends Collection
         if (strtolower($presenter) === 'foundation')
         {
             $presenter = new FoundationPresenter($this);
-        }
-        elseif (strtolower($presenter) === 'bs4')
-        {
+
+        } elseif (strtolower($presenter) === 'bs4') {
             $presenter = new Bootstrap4Presenter($this);
         }
         else {
             $presenter = new Presenter($this);
         }
+
         return $presenter->render();
     }
-}   
+}
